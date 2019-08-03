@@ -7,3 +7,4 @@ obj/
 release/
 packages/
 .vs
+TestResults/

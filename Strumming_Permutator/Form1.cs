@@ -21,15 +21,36 @@ namespace Strumming_Permutator
 
         private void ButtonGo_Click(object sender, EventArgs e)
         {
-            var sequence = GenerateSequence(NotesPerBar);
-            
-           
-
+            var sequence = GenerateSequence(NotesPerBar, 1);
         }
 
-        public string GenerateSequence(int notesPerBar)
+        public static string GenerateSequence(int notesPerBar, int subdivisions)
         {
-            throw new NotImplementedException();
+            List<string> sequence = new List<string>();
+            for (int i = 1; i <= notesPerBar; i++)
+            {
+                sequence.Add(i.ToString());
+                
+                if (subdivisions == 2)
+                {
+                    sequence.Add("+");
+                }
+
+                if (subdivisions == 3)
+                {
+                    sequence.Add("+");
+                    sequence.Add("a");
+                }
+
+                if (subdivisions == 4)
+                {
+                    sequence.Add("e");
+                    sequence.Add("+");
+                    sequence.Add("a");
+                }
+            }
+
+            return string.Join(" ", sequence);
         }
 
         private void RbThreeFour_CheckedChanged(object sender, EventArgs e)
