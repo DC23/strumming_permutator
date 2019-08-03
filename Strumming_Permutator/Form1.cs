@@ -15,17 +15,34 @@ namespace Strumming_Permutator
         public Form1()
         {
             InitializeComponent();
+            keepBeatOne.Checked = true;
+            rbFourFour.Checked = true;
+            subdivisions.Value = 2;
+            minSkip.Value = 1;
+            maxSkip.Value = 1;
+            Go();
         }
 
         public int NotesPerBar { get; set; }
 
         private void ButtonGo_Click(object sender, EventArgs e)
         {
-            var sequence = GenerateSequence(NotesPerBar, 1);
+            Go();
         }
 
-        public static string GenerateSequence(int notesPerBar, int subdivisions)
+        private void Go()
+        { 
+            output.Text = GenerateSequence(
+                NotesPerBar,
+                (int)subdivisions.Value,
+                (int)minSkip.Value,
+                (int)maxSkip.Value,
+                keepBeatOne.Checked);
+        }
+
+        public static string GenerateSequence(int notesPerBar, int subdivisions, int minSkip = 0, int maxSkip = 0, bool keepFirstBeat = true)
         {
+            // Build the full sequence
             List<string> sequence = new List<string>();
             for (int i = 1; i <= notesPerBar; i++)
             {
@@ -50,6 +67,22 @@ namespace Strumming_Permutator
                 }
             }
 
+            // Drop some elements
+            minSkip = Math.Max(0, minSkip);
+            maxSkip = Math.Min(Math.Max(minSkip, maxSkip), sequence.Count);
+
+            int start = keepFirstBeat ? 1 : 0;
+            int end = sequence.Count;
+            var rand = new Random();
+            int numSkip = rand.Next(minSkip, maxSkip+1);
+
+            for (int i = 0; i < numSkip; i++)
+            {
+                int index = rand.Next(start, end);
+                sequence[index] = "_";
+            }
+
+            // convert to space-separated string
             return string.Join(" ", sequence);
         }
 

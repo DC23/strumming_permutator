@@ -54,28 +54,29 @@
             // 
             // output
             // 
-            this.output.BackColor = System.Drawing.Color.SlateGray;
+            this.output.BackColor = System.Drawing.Color.LightSteelBlue;
             this.output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.output.Location = new System.Drawing.Point(259, 3);
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output.Location = new System.Drawing.Point(225, 3);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(251, 255);
+            this.output.Size = new System.Drawing.Size(515, 255);
             this.output.TabIndex = 0;
             this.output.Text = "";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.output, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(513, 261);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(743, 261);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -103,13 +104,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 255);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(216, 255);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // subdivisions
             // 
             this.subdivisions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subdivisions.Location = new System.Drawing.Point(128, 83);
+            this.subdivisions.Location = new System.Drawing.Point(111, 83);
             this.subdivisions.Maximum = new decimal(new int[] {
             4,
             0,
@@ -121,7 +122,7 @@
             0,
             0});
             this.subdivisions.Name = "subdivisions";
-            this.subdivisions.Size = new System.Drawing.Size(119, 20);
+            this.subdivisions.Size = new System.Drawing.Size(102, 20);
             this.subdivisions.TabIndex = 1;
             this.subdivisions.Value = new decimal(new int[] {
             1,
@@ -132,22 +133,22 @@
             // minSkip
             // 
             this.minSkip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minSkip.Location = new System.Drawing.Point(128, 109);
+            this.minSkip.Location = new System.Drawing.Point(111, 109);
             this.minSkip.Maximum = new decimal(new int[] {
             8,
             0,
             0,
             0});
             this.minSkip.Name = "minSkip";
-            this.minSkip.Size = new System.Drawing.Size(119, 20);
+            this.minSkip.Size = new System.Drawing.Size(102, 20);
             this.minSkip.TabIndex = 3;
             // 
             // maxSkip
             // 
             this.maxSkip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maxSkip.Location = new System.Drawing.Point(128, 135);
+            this.maxSkip.Location = new System.Drawing.Point(111, 135);
             this.maxSkip.Name = "maxSkip";
-            this.maxSkip.Size = new System.Drawing.Size(119, 20);
+            this.maxSkip.Size = new System.Drawing.Size(102, 20);
             this.maxSkip.TabIndex = 4;
             // 
             // keepBeatOne
@@ -156,19 +157,19 @@
             this.keepBeatOne.Checked = true;
             this.keepBeatOne.CheckState = System.Windows.Forms.CheckState.Checked;
             this.keepBeatOne.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.keepBeatOne.Location = new System.Drawing.Point(128, 161);
+            this.keepBeatOne.Location = new System.Drawing.Point(111, 161);
             this.keepBeatOne.Name = "keepBeatOne";
             this.keepBeatOne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.keepBeatOne.Size = new System.Drawing.Size(119, 17);
+            this.keepBeatOne.Size = new System.Drawing.Size(102, 17);
             this.keepBeatOne.TabIndex = 5;
             this.keepBeatOne.Text = "Keep Beat One";
             this.keepBeatOne.UseVisualStyleBackColor = true;
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(128, 184);
+            this.buttonGo.Location = new System.Drawing.Point(111, 184);
             this.buttonGo.Name = "buttonGo";
-            this.buttonGo.Size = new System.Drawing.Size(119, 23);
+            this.buttonGo.Size = new System.Drawing.Size(102, 23);
             this.buttonGo.TabIndex = 6;
             this.buttonGo.Text = "&Go";
             this.buttonGo.UseVisualStyleBackColor = true;
@@ -180,7 +181,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 80);
+            this.label1.Size = new System.Drawing.Size(102, 80);
             this.label1.TabIndex = 7;
             this.label1.Text = "Time Signature:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,7 +192,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 26);
+            this.label2.Size = new System.Drawing.Size(102, 26);
             this.label2.TabIndex = 8;
             this.label2.Text = "Subdivisions:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -202,7 +203,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 26);
+            this.label3.Size = new System.Drawing.Size(102, 26);
             this.label3.TabIndex = 9;
             this.label3.Text = "Min Skip:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -213,7 +214,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 26);
+            this.label4.Size = new System.Drawing.Size(102, 26);
             this.label4.TabIndex = 10;
             this.label4.Text = "Max Skip:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,9 +225,9 @@
             this.panel1.Controls.Add(this.rbFourFour);
             this.panel1.Controls.Add(this.rbThreeFour);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(128, 3);
+            this.panel1.Location = new System.Drawing.Point(111, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(119, 74);
+            this.panel1.Size = new System.Drawing.Size(102, 74);
             this.panel1.TabIndex = 11;
             // 
             // rbSixEight
@@ -236,7 +237,6 @@
             this.rbSixEight.Name = "rbSixEight";
             this.rbSixEight.Size = new System.Drawing.Size(42, 17);
             this.rbSixEight.TabIndex = 2;
-            this.rbSixEight.TabStop = true;
             this.rbSixEight.Text = "6/8";
             this.rbSixEight.UseVisualStyleBackColor = true;
             this.rbSixEight.CheckedChanged += new System.EventHandler(this.RbSixEight_CheckedChanged);
@@ -244,12 +244,10 @@
             // rbFourFour
             // 
             this.rbFourFour.AutoSize = true;
-            this.rbFourFour.Checked = true;
             this.rbFourFour.Location = new System.Drawing.Point(9, 29);
             this.rbFourFour.Name = "rbFourFour";
             this.rbFourFour.Size = new System.Drawing.Size(42, 17);
             this.rbFourFour.TabIndex = 1;
-            this.rbFourFour.TabStop = true;
             this.rbFourFour.Text = "4/4";
             this.rbFourFour.UseVisualStyleBackColor = true;
             this.rbFourFour.CheckedChanged += new System.EventHandler(this.RbFourFour_CheckedChanged);
@@ -261,7 +259,6 @@
             this.rbThreeFour.Name = "rbThreeFour";
             this.rbThreeFour.Size = new System.Drawing.Size(42, 17);
             this.rbThreeFour.TabIndex = 0;
-            this.rbThreeFour.TabStop = true;
             this.rbThreeFour.Text = "3/4";
             this.rbThreeFour.UseVisualStyleBackColor = true;
             this.rbThreeFour.CheckedChanged += new System.EventHandler(this.RbThreeFour_CheckedChanged);
@@ -271,11 +268,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(513, 261);
+            this.ClientSize = new System.Drawing.Size(743, 261);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Strumming Rhythm Permutator";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
