@@ -16,5 +16,35 @@ namespace Strumming_Permutator
         {
             InitializeComponent();
         }
+
+        public int NotesPerBar { get; set; }
+
+        private void ButtonGo_Click(object sender, EventArgs e)
+        {
+            var sequence = GenerateSequence(NotesPerBar);
+            
+           
+
+        }
+
+        public string GenerateSequence(int notesPerBar)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void RbThreeFour_CheckedChanged(object sender, EventArgs e)
+        {
+            NotesPerBar = 3;
+        }
+
+        private void RbFourFour_CheckedChanged(object sender, EventArgs e)
+        {
+            NotesPerBar = 4;
+        }
+
+        private void RbSixEight_CheckedChanged(object sender, EventArgs e)
+        {
+            NotesPerBar = 6;
+        }
     }
 }
