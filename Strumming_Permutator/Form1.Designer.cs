@@ -164,7 +164,7 @@
             // 
             this.buttonGo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGo.Location = new System.Drawing.Point(296, 287);
+            this.buttonGo.Location = new System.Drawing.Point(320, 287);
             this.buttonGo.Name = "buttonGo";
             this.buttonGo.Size = new System.Drawing.Size(102, 23);
             this.buttonGo.TabIndex = 17;
@@ -270,23 +270,19 @@
             // numSubdivisionVariations
             // 
             this.numSubdivisionVariations.Location = new System.Drawing.Point(150, 16);
-            this.numSubdivisionVariations.Maximum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
             this.numSubdivisionVariations.Name = "numSubdivisionVariations";
             this.numSubdivisionVariations.Size = new System.Drawing.Size(71, 20);
             this.numSubdivisionVariations.TabIndex = 0;
+            this.numSubdivisionVariations.ValueChanged += new System.EventHandler(this.NumSubdivisionVariations_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 13);
+            this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Replace this many beats";
+            this.label1.Text = "Variant subdivision chance:";
             // 
             // label5
             // 
@@ -318,6 +314,7 @@
             0,
             0,
             0});
+            this.variantSubdivisions.ValueChanged += new System.EventHandler(this.VariantSubdivisions_ValueChanged);
             // 
             // Form1
             // 
