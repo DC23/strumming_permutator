@@ -126,5 +126,10 @@ namespace Strumming_Permutator
         {
             Go();
         }
+
+        private void SubstituteBeat_CheckedChanged(object sender, EventArgs e)
+        {
+            Go();
+        }
     }
 }

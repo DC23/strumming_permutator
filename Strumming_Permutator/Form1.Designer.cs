@@ -44,12 +44,15 @@
             this.rbSixEight = new System.Windows.Forms.RadioButton();
             this.rbFourFour = new System.Windows.Forms.RadioButton();
             this.rbThreeFour = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.substituteBeat = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // output
@@ -60,7 +63,7 @@
             this.output.Location = new System.Drawing.Point(225, 3);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(515, 255);
+            this.output.Size = new System.Drawing.Size(515, 321);
             this.output.TabIndex = 0;
             this.output.Text = "";
             // 
@@ -76,7 +79,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(743, 261);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(743, 324);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -88,22 +91,24 @@
             this.tableLayoutPanel2.Controls.Add(this.minSkip, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.maxSkip, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.keepBeatOne, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.buttonGo, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonGo, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 5);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowCount = 7;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(216, 255);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -171,7 +176,7 @@
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(111, 184);
+            this.buttonGo.Location = new System.Drawing.Point(111, 264);
             this.buttonGo.Name = "buttonGo";
             this.buttonGo.Size = new System.Drawing.Size(102, 23);
             this.buttonGo.TabIndex = 6;
@@ -267,12 +272,33 @@
             this.rbThreeFour.UseVisualStyleBackColor = true;
             this.rbThreeFour.CheckedChanged += new System.EventHandler(this.RbThreeFour_CheckedChanged);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.substituteBeat);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(111, 184);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(102, 74);
+            this.panel2.TabIndex = 12;
+            // 
+            // substituteBeat
+            // 
+            this.substituteBeat.AutoSize = true;
+            this.substituteBeat.Location = new System.Drawing.Point(0, 4);
+            this.substituteBeat.Name = "substituteBeat";
+            this.substituteBeat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.substituteBeat.Size = new System.Drawing.Size(98, 17);
+            this.substituteBeat.TabIndex = 0;
+            this.substituteBeat.Text = "Substitute Beat";
+            this.substituteBeat.UseVisualStyleBackColor = true;
+            this.substituteBeat.CheckedChanged += new System.EventHandler(this.SubstituteBeat_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(743, 261);
+            this.ClientSize = new System.Drawing.Size(743, 324);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Form1";
@@ -285,6 +311,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,6 +335,8 @@
         private System.Windows.Forms.RadioButton rbSixEight;
         private System.Windows.Forms.RadioButton rbFourFour;
         private System.Windows.Forms.RadioButton rbThreeFour;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckBox substituteBeat;
     }
 }
 
