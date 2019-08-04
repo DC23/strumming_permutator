@@ -70,17 +70,17 @@ namespace Strumming_Permutator
             // Drop some elements
             minSkip = Math.Max(0, minSkip);
             maxSkip = Math.Min(Math.Max(minSkip, maxSkip), sequence.Count);
-
             int start = keepFirstBeat ? 1 : 0;
             int end = sequence.Count;
             var rand = new Random();
             int numSkip = rand.Next(minSkip, maxSkip+1);
 
+            // Create a list of sequence indicies, shuffle it
+            var indicies = Enumerable.Range(start, end - start).ToList().OrderBy(x => rand.NextDouble()).ToArray();
+
+            // take numSkip from the start to skip
             for (int i = 0; i < numSkip; i++)
-            {
-                int index = rand.Next(start, end);
-                sequence[index] = "_";
-            }
+                sequence[indicies[i]] = "_";
 
             // convert to space-separated string
             return string.Join(" ", sequence);
