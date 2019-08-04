@@ -28,89 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.output = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.subdivisions = new System.Windows.Forms.NumericUpDown();
-            this.minSkip = new System.Windows.Forms.NumericUpDown();
-            this.maxSkip = new System.Windows.Forms.NumericUpDown();
-            this.keepBeatOne = new System.Windows.Forms.CheckBox();
-            this.buttonGo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.keepBeatOne = new System.Windows.Forms.CheckBox();
+            this.maxSkip = new System.Windows.Forms.NumericUpDown();
+            this.minSkip = new System.Windows.Forms.NumericUpDown();
+            this.buttonGo = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelTimeSig = new System.Windows.Forms.Panel();
             this.rbSixEight = new System.Windows.Forms.RadioButton();
             this.rbFourFour = new System.Windows.Forms.RadioButton();
             this.rbThreeFour = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numSubdivisionVariations = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.variantSubdivisions = new System.Windows.Forms.NumericUpDown();
+            this.outputFullSequence = new System.Windows.Forms.RichTextBox();
+            this.output = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.panelTimeSig.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSubdivisionVariations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variantSubdivisions)).BeginInit();
             this.SuspendLayout();
-            // 
-            // output
-            // 
-            this.output.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(225, 3);
-            this.output.Name = "output";
-            this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(515, 255);
-            this.output.TabIndex = 0;
-            this.output.Text = "";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.output, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(743, 261);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.subdivisions, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.minSkip, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.maxSkip, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.keepBeatOne, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.buttonGo, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(216, 255);
-            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // subdivisions
             // 
-            this.subdivisions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subdivisions.Location = new System.Drawing.Point(111, 83);
+            this.subdivisions.Location = new System.Drawing.Point(6, 16);
             this.subdivisions.Maximum = new decimal(new int[] {
             4,
             0,
@@ -122,8 +76,8 @@
             0,
             0});
             this.subdivisions.Name = "subdivisions";
-            this.subdivisions.Size = new System.Drawing.Size(102, 20);
-            this.subdivisions.TabIndex = 1;
+            this.subdivisions.Size = new System.Drawing.Size(98, 20);
+            this.subdivisions.TabIndex = 13;
             this.subdivisions.Value = new decimal(new int[] {
             1,
             0,
@@ -131,108 +85,104 @@
             0});
             this.subdivisions.ValueChanged += new System.EventHandler(this.Subdivisions_ValueChanged);
             // 
-            // minSkip
-            // 
-            this.minSkip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minSkip.Location = new System.Drawing.Point(111, 109);
-            this.minSkip.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.minSkip.Name = "minSkip";
-            this.minSkip.Size = new System.Drawing.Size(102, 20);
-            this.minSkip.TabIndex = 3;
-            this.minSkip.ValueChanged += new System.EventHandler(this.MinSkip_ValueChanged);
-            // 
-            // maxSkip
-            // 
-            this.maxSkip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maxSkip.Location = new System.Drawing.Point(111, 135);
-            this.maxSkip.Name = "maxSkip";
-            this.maxSkip.Size = new System.Drawing.Size(102, 20);
-            this.maxSkip.TabIndex = 4;
-            this.maxSkip.ValueChanged += new System.EventHandler(this.MaxSkip_ValueChanged);
-            // 
-            // keepBeatOne
-            // 
-            this.keepBeatOne.AutoSize = true;
-            this.keepBeatOne.Checked = true;
-            this.keepBeatOne.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.keepBeatOne.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.keepBeatOne.Location = new System.Drawing.Point(111, 161);
-            this.keepBeatOne.Name = "keepBeatOne";
-            this.keepBeatOne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.keepBeatOne.Size = new System.Drawing.Size(102, 17);
-            this.keepBeatOne.TabIndex = 5;
-            this.keepBeatOne.Text = "Keep Beat One";
-            this.keepBeatOne.UseVisualStyleBackColor = true;
-            this.keepBeatOne.CheckedChanged += new System.EventHandler(this.KeepBeatOne_CheckedChanged);
-            // 
-            // buttonGo
-            // 
-            this.buttonGo.Location = new System.Drawing.Point(111, 184);
-            this.buttonGo.Name = "buttonGo";
-            this.buttonGo.Size = new System.Drawing.Size(102, 23);
-            this.buttonGo.TabIndex = 6;
-            this.buttonGo.Text = "&Go";
-            this.buttonGo.UseVisualStyleBackColor = true;
-            this.buttonGo.Click += new System.EventHandler(this.ButtonGo_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 80);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Time Signature:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 26);
-            this.label2.TabIndex = 8;
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 19;
             this.label2.Text = "Subdivisions:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 106);
+            this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 26);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Min Skip:";
+            this.label3.Size = new System.Drawing.Size(149, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Minimum Subdivisions to Skip:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 132);
+            this.label4.Location = new System.Drawing.Point(12, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 26);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Max Skip:";
+            this.label4.Size = new System.Drawing.Size(152, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Maximum Subdivisions to Skip:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel1
+            // keepBeatOne
             // 
-            this.panel1.Controls.Add(this.rbSixEight);
-            this.panel1.Controls.Add(this.rbFourFour);
-            this.panel1.Controls.Add(this.rbThreeFour);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(111, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(102, 74);
-            this.panel1.TabIndex = 11;
+            this.keepBeatOne.AutoSize = true;
+            this.keepBeatOne.Checked = true;
+            this.keepBeatOne.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.keepBeatOne.Location = new System.Drawing.Point(12, 84);
+            this.keepBeatOne.Name = "keepBeatOne";
+            this.keepBeatOne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.keepBeatOne.Size = new System.Drawing.Size(146, 17);
+            this.keepBeatOne.TabIndex = 16;
+            this.keepBeatOne.Text = "Never Remove Beat One";
+            this.keepBeatOne.UseVisualStyleBackColor = true;
+            this.keepBeatOne.CheckedChanged += new System.EventHandler(this.KeepBeatOne_CheckedChanged);
+            // 
+            // maxSkip
+            // 
+            this.maxSkip.Location = new System.Drawing.Point(169, 51);
+            this.maxSkip.Name = "maxSkip";
+            this.maxSkip.Size = new System.Drawing.Size(81, 20);
+            this.maxSkip.TabIndex = 15;
+            this.maxSkip.ValueChanged += new System.EventHandler(this.MaxSkip_ValueChanged);
+            // 
+            // minSkip
+            // 
+            this.minSkip.Location = new System.Drawing.Point(169, 19);
+            this.minSkip.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.minSkip.Name = "minSkip";
+            this.minSkip.Size = new System.Drawing.Size(81, 20);
+            this.minSkip.TabIndex = 14;
+            this.minSkip.ValueChanged += new System.EventHandler(this.MinSkip_ValueChanged);
+            // 
+            // buttonGo
+            // 
+            this.buttonGo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGo.Location = new System.Drawing.Point(320, 287);
+            this.buttonGo.Name = "buttonGo";
+            this.buttonGo.Size = new System.Drawing.Size(102, 23);
+            this.buttonGo.TabIndex = 17;
+            this.buttonGo.Text = "&Go";
+            this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.ButtonGo_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panelTimeSig);
+            this.groupBox1.Location = new System.Drawing.Point(10, 109);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 160);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Time Signature";
+            // 
+            // panelTimeSig
+            // 
+            this.panelTimeSig.Controls.Add(this.rbSixEight);
+            this.panelTimeSig.Controls.Add(this.rbFourFour);
+            this.panelTimeSig.Controls.Add(this.rbThreeFour);
+            this.panelTimeSig.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelTimeSig.Location = new System.Drawing.Point(3, 16);
+            this.panelTimeSig.Name = "panelTimeSig";
+            this.panelTimeSig.Size = new System.Drawing.Size(73, 141);
+            this.panelTimeSig.TabIndex = 23;
             // 
             // rbSixEight
             // 
@@ -248,10 +198,12 @@
             // rbFourFour
             // 
             this.rbFourFour.AutoSize = true;
+            this.rbFourFour.Checked = true;
             this.rbFourFour.Location = new System.Drawing.Point(9, 29);
             this.rbFourFour.Name = "rbFourFour";
             this.rbFourFour.Size = new System.Drawing.Size(42, 17);
             this.rbFourFour.TabIndex = 1;
+            this.rbFourFour.TabStop = true;
             this.rbFourFour.Text = "4/4";
             this.rbFourFour.UseVisualStyleBackColor = true;
             this.rbFourFour.CheckedChanged += new System.EventHandler(this.RbFourFour_CheckedChanged);
@@ -267,46 +219,180 @@
             this.rbThreeFour.UseVisualStyleBackColor = true;
             this.rbThreeFour.CheckedChanged += new System.EventHandler(this.RbThreeFour_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.subdivisions);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(82, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(115, 141);
+            this.panel1.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.maxSkip);
+            this.groupBox2.Controls.Add(this.minSkip);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.keepBeatOne);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(216, 109);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(279, 160);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Subdivision Removal Rules";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.variantSubdivisions);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.numSubdivisionVariations);
+            this.groupBox3.Location = new System.Drawing.Point(502, 109);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(227, 160);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Subdivision Variations";
+            // 
+            // numSubdivisionVariations
+            // 
+            this.numSubdivisionVariations.Location = new System.Drawing.Point(150, 16);
+            this.numSubdivisionVariations.Name = "numSubdivisionVariations";
+            this.numSubdivisionVariations.Size = new System.Drawing.Size(71, 20);
+            this.numSubdivisionVariations.TabIndex = 0;
+            this.numSubdivisionVariations.ValueChanged += new System.EventHandler(this.NumSubdivisionVariations_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Variant subdivision chance:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "With this many subdivisions:";
+            // 
+            // variantSubdivisions
+            // 
+            this.variantSubdivisions.Location = new System.Drawing.Point(150, 45);
+            this.variantSubdivisions.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.variantSubdivisions.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.variantSubdivisions.Name = "variantSubdivisions";
+            this.variantSubdivisions.Size = new System.Drawing.Size(71, 20);
+            this.variantSubdivisions.TabIndex = 3;
+            this.variantSubdivisions.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.variantSubdivisions.ValueChanged += new System.EventHandler(this.VariantSubdivisions_ValueChanged);
+            // 
+            // outputFullSequence
+            // 
+            this.outputFullSequence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputFullSequence.BackColor = System.Drawing.Color.Silver;
+            this.outputFullSequence.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputFullSequence.DetectUrls = false;
+            this.outputFullSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputFullSequence.ForeColor = System.Drawing.Color.Gray;
+            this.outputFullSequence.Location = new System.Drawing.Point(12, 59);
+            this.outputFullSequence.Name = "outputFullSequence";
+            this.outputFullSequence.ReadOnly = true;
+            this.outputFullSequence.Size = new System.Drawing.Size(719, 40);
+            this.outputFullSequence.TabIndex = 18;
+            this.outputFullSequence.Text = "";
+            // 
+            // output
+            // 
+            this.output.BackColor = System.Drawing.Color.Silver;
+            this.output.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output.Location = new System.Drawing.Point(12, 12);
+            this.output.Name = "output";
+            this.output.ReadOnly = true;
+            this.output.Size = new System.Drawing.Size(719, 40);
+            this.output.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(743, 261);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(743, 327);
+            this.Controls.Add(this.output);
+            this.Controls.Add(this.outputFullSequence);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.buttonGo);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Strumming Rhythm Permutator";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minSkip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minSkip)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.panelTimeSig.ResumeLayout(false);
+            this.panelTimeSig.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSubdivisionVariations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variantSubdivisions)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox output;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.NumericUpDown subdivisions;
-        private System.Windows.Forms.NumericUpDown minSkip;
-        private System.Windows.Forms.NumericUpDown maxSkip;
-        private System.Windows.Forms.CheckBox keepBeatOne;
-        private System.Windows.Forms.Button buttonGo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox keepBeatOne;
+        private System.Windows.Forms.NumericUpDown maxSkip;
+        private System.Windows.Forms.NumericUpDown minSkip;
+        private System.Windows.Forms.Button buttonGo;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelTimeSig;
         private System.Windows.Forms.RadioButton rbSixEight;
         private System.Windows.Forms.RadioButton rbFourFour;
         private System.Windows.Forms.RadioButton rbThreeFour;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown variantSubdivisions;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numSubdivisionVariations;
+        private System.Windows.Forms.RichTextBox outputFullSequence;
+        private System.Windows.Forms.TextBox output;
     }
 }
 
