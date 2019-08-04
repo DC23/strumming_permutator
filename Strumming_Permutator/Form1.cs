@@ -68,12 +68,15 @@ namespace Strumming_Permutator
             }
 
             // Drop some elements
-            minSkip = Math.Max(0, minSkip);
-            maxSkip = Math.Min(Math.Max(minSkip, maxSkip), sequence.Count);
             int start = keepFirstBeat ? 1 : 0;
             int end = sequence.Count;
+            int numSkippableBeats = end - start;
+            minSkip = Math.Min(Math.Max(0, minSkip), numSkippableBeats);
+            maxSkip = Math.Min(Math.Max(minSkip, maxSkip), numSkippableBeats);
             var rand = new Random();
-            int numSkip = rand.Next(minSkip, maxSkip+1);
+
+            // Choose the number of items to drop, making sure to not exceed the number of available elements
+            int numSkip = rand.Next(minSkip, maxSkip + 1);
 
             // Create a list of sequence indicies, shuffle it
             var indicies = Enumerable.Range(start, end - start).ToList().OrderBy(x => rand.NextDouble()).ToArray();
@@ -89,16 +92,39 @@ namespace Strumming_Permutator
         private void RbThreeFour_CheckedChanged(object sender, EventArgs e)
         {
             NotesPerBar = 3;
+            Go();
         }
 
         private void RbFourFour_CheckedChanged(object sender, EventArgs e)
         {
             NotesPerBar = 4;
+            Go();
         }
 
         private void RbSixEight_CheckedChanged(object sender, EventArgs e)
         {
             NotesPerBar = 6;
+            Go();
+        }
+
+        private void Subdivisions_ValueChanged(object sender, EventArgs e)
+        {
+            Go();
+        }
+
+        private void MinSkip_ValueChanged(object sender, EventArgs e)
+        {
+            Go();
+        }
+
+        private void MaxSkip_ValueChanged(object sender, EventArgs e)
+        {
+            Go();
+        }
+
+        private void KeepBeatOne_CheckedChanged(object sender, EventArgs e)
+        {
+            Go();
         }
     }
 }
