@@ -23,7 +23,7 @@ namespace Strumming_Permutator
             Go();
         }
 
-        public int NotesPerBar { get; set; }
+        public int NotesPerBar { get; set; } = 4;
 
         private void ButtonGo_Click(object sender, EventArgs e)
         {
