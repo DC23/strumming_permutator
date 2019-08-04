@@ -31,7 +31,7 @@ namespace Strumming_Permutator
 
         private void Go()
         {
-            output.Text = GenerateSequence(
+            var sequence = GenerateSequence(
                 NotesPerBar,
                 (int)subdivisions.Value,
                 (int)minSkip.Value,
@@ -39,9 +39,12 @@ namespace Strumming_Permutator
                 keepBeatOne.Checked,
                 (int)numSubdivisionVariations.Value,
                 (int)variantSubdivisions.Value);
+
+            output.Text = sequence.Item2;
+            outputFullSequence.Text = sequence.Item1;
         }
 
-        public static string GenerateSequence(
+        public static Tuple<string, string> GenerateSequence(
             int notesPerBar,
             int subdivisions,
             int minSkip = 0,
@@ -82,6 +85,8 @@ namespace Strumming_Permutator
                 }
             }
 
+            string fullSequence = string.Join(" ", sequence);
+
             // Drop some elements
             int start = keepFirstBeat ? 1 : 0;
             int end = sequence.Count;
@@ -100,7 +105,7 @@ namespace Strumming_Permutator
                 sequence[indicies[i]] = "_";
 
             // convert to space-separated string
-            return string.Join(" ", sequence);
+            return Tuple.Create(fullSequence, string.Join(" ", sequence));
         }
 
         private void RbThreeFour_CheckedChanged(object sender, EventArgs e)

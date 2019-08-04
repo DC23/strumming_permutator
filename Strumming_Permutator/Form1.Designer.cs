@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.variantSubdivisions = new System.Windows.Forms.NumericUpDown();
+            this.outputFullSequence = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
@@ -68,7 +69,7 @@
             this.output.Location = new System.Drawing.Point(12, 12);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(719, 91);
+            this.output.Size = new System.Drawing.Size(719, 46);
             this.output.TabIndex = 0;
             this.output.Text = "";
             // 
@@ -316,12 +317,25 @@
             0});
             this.variantSubdivisions.ValueChanged += new System.EventHandler(this.VariantSubdivisions_ValueChanged);
             // 
+            // outputFullSequence
+            // 
+            this.outputFullSequence.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.outputFullSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputFullSequence.ForeColor = System.Drawing.Color.Gray;
+            this.outputFullSequence.Location = new System.Drawing.Point(12, 57);
+            this.outputFullSequence.Name = "outputFullSequence";
+            this.outputFullSequence.ReadOnly = true;
+            this.outputFullSequence.Size = new System.Drawing.Size(719, 46);
+            this.outputFullSequence.TabIndex = 18;
+            this.outputFullSequence.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(743, 327);
+            this.Controls.Add(this.outputFullSequence);
             this.Controls.Add(this.output);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonGo);
@@ -374,6 +388,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numSubdivisionVariations;
+        private System.Windows.Forms.RichTextBox outputFullSequence;
     }
 }
 
