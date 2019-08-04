@@ -18,8 +18,8 @@ namespace Strumming_Permutator
             keepBeatOne.Checked = true;
             rbFourFour.Checked = true;
             subdivisions.Value = 2;
-            minSkip.Value = 0;
-            maxSkip.Value = 0;
+            minSkip.Value = 1;
+            maxSkip.Value = 3;
         }
 
         public int NotesPerBar { get; set; } = 4;

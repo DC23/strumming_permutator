@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.output = new System.Windows.Forms.RichTextBox();
             this.subdivisions = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.variantSubdivisions = new System.Windows.Forms.NumericUpDown();
             this.outputFullSequence = new System.Windows.Forms.RichTextBox();
+            this.output = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
@@ -61,17 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSubdivisionVariations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.variantSubdivisions)).BeginInit();
             this.SuspendLayout();
-            // 
-            // output
-            // 
-            this.output.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(12, 12);
-            this.output.Name = "output";
-            this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(719, 46);
-            this.output.TabIndex = 0;
-            this.output.Text = "";
             // 
             // subdivisions
             // 
@@ -319,15 +308,30 @@
             // 
             // outputFullSequence
             // 
-            this.outputFullSequence.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.outputFullSequence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputFullSequence.BackColor = System.Drawing.Color.Silver;
+            this.outputFullSequence.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputFullSequence.DetectUrls = false;
             this.outputFullSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputFullSequence.ForeColor = System.Drawing.Color.Gray;
-            this.outputFullSequence.Location = new System.Drawing.Point(12, 57);
+            this.outputFullSequence.Location = new System.Drawing.Point(12, 59);
             this.outputFullSequence.Name = "outputFullSequence";
             this.outputFullSequence.ReadOnly = true;
-            this.outputFullSequence.Size = new System.Drawing.Size(719, 46);
+            this.outputFullSequence.Size = new System.Drawing.Size(719, 40);
             this.outputFullSequence.TabIndex = 18;
             this.outputFullSequence.Text = "";
+            // 
+            // output
+            // 
+            this.output.BackColor = System.Drawing.Color.Silver;
+            this.output.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output.Location = new System.Drawing.Point(12, 12);
+            this.output.Name = "output";
+            this.output.ReadOnly = true;
+            this.output.Size = new System.Drawing.Size(719, 40);
+            this.output.TabIndex = 19;
             // 
             // Form1
             // 
@@ -335,8 +339,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(743, 327);
-            this.Controls.Add(this.outputFullSequence);
             this.Controls.Add(this.output);
+            this.Controls.Add(this.outputFullSequence);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.groupBox2);
@@ -362,12 +366,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSubdivisionVariations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.variantSubdivisions)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox output;
         private System.Windows.Forms.NumericUpDown subdivisions;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -389,6 +392,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numSubdivisionVariations;
         private System.Windows.Forms.RichTextBox outputFullSequence;
+        private System.Windows.Forms.TextBox output;
     }
 }
 
