@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.output = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutMain = new System.Windows.Forms.TableLayoutPanel();
-            this.panelLHS = new System.Windows.Forms.Panel();
             this.subdivisions = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.variantSubdivisions = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minSkip)).BeginInit();
@@ -67,37 +64,13 @@
             // output
             // 
             this.output.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(225, 3);
+            this.output.Location = new System.Drawing.Point(12, 12);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(515, 318);
+            this.output.Size = new System.Drawing.Size(719, 91);
             this.output.TabIndex = 0;
             this.output.Text = "";
-            // 
-            // tableLayoutMain
-            // 
-            this.tableLayoutMain.ColumnCount = 2;
-            this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutMain.Controls.Add(this.output, 1, 0);
-            this.tableLayoutMain.Controls.Add(this.panelLHS, 0, 0);
-            this.tableLayoutMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutMain.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutMain.Name = "tableLayoutMain";
-            this.tableLayoutMain.RowCount = 1;
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.Size = new System.Drawing.Size(743, 324);
-            this.tableLayoutMain.TabIndex = 0;
-            // 
-            // panelLHS
-            // 
-            this.panelLHS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLHS.Location = new System.Drawing.Point(3, 3);
-            this.panelLHS.Name = "panelLHS";
-            this.panelLHS.Size = new System.Drawing.Size(216, 318);
-            this.panelLHS.TabIndex = 1;
             // 
             // subdivisions
             // 
@@ -189,7 +162,9 @@
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(296, 535);
+            this.buttonGo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGo.Location = new System.Drawing.Point(296, 287);
             this.buttonGo.Name = "buttonGo";
             this.buttonGo.Size = new System.Drawing.Size(102, 23);
             this.buttonGo.TabIndex = 17;
@@ -201,7 +176,7 @@
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.panelTimeSig);
-            this.groupBox1.Location = new System.Drawing.Point(12, 341);
+            this.groupBox1.Location = new System.Drawing.Point(10, 109);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 160);
             this.groupBox1.TabIndex = 1;
@@ -271,7 +246,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.keepBeatOne);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(218, 341);
+            this.groupBox2.Location = new System.Drawing.Point(216, 109);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(279, 160);
             this.groupBox2.TabIndex = 2;
@@ -285,7 +260,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.numSubdivisionVariations);
-            this.groupBox3.Location = new System.Drawing.Point(504, 341);
+            this.groupBox3.Location = new System.Drawing.Point(502, 109);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(227, 160);
             this.groupBox3.TabIndex = 3;
@@ -349,16 +324,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(743, 596);
+            this.ClientSize = new System.Drawing.Size(743, 327);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tableLayoutMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Strumming Rhythm Permutator";
-            this.tableLayoutMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.subdivisions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxSkip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minSkip)).EndInit();
@@ -380,8 +357,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox output;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutMain;
-        private System.Windows.Forms.Panel panelLHS;
         private System.Windows.Forms.NumericUpDown subdivisions;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
