@@ -129,6 +129,7 @@
             0,
             0,
             0});
+            this.subdivisions.ValueChanged += new System.EventHandler(this.Subdivisions_ValueChanged);
             // 
             // minSkip
             // 
@@ -142,6 +143,7 @@
             this.minSkip.Name = "minSkip";
             this.minSkip.Size = new System.Drawing.Size(102, 20);
             this.minSkip.TabIndex = 3;
+            this.minSkip.ValueChanged += new System.EventHandler(this.MinSkip_ValueChanged);
             // 
             // maxSkip
             // 
@@ -150,6 +152,7 @@
             this.maxSkip.Name = "maxSkip";
             this.maxSkip.Size = new System.Drawing.Size(102, 20);
             this.maxSkip.TabIndex = 4;
+            this.maxSkip.ValueChanged += new System.EventHandler(this.MaxSkip_ValueChanged);
             // 
             // keepBeatOne
             // 
@@ -164,6 +167,7 @@
             this.keepBeatOne.TabIndex = 5;
             this.keepBeatOne.Text = "Keep Beat One";
             this.keepBeatOne.UseVisualStyleBackColor = true;
+            this.keepBeatOne.CheckedChanged += new System.EventHandler(this.KeepBeatOne_CheckedChanged);
             // 
             // buttonGo
             // 
